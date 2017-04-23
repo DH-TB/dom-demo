@@ -19,3 +19,21 @@ let id = document.getElementById("id");
 let node2 = document.createTextNode("node2");
 id.appendChild(node2);
 p.insertBefore(node2,node1); //现在p里面没有node,只有node1
+
+console.log(document.nodeName);　　//"#document"
+console.log(node2.nodeName);   //"#text"
+console.log(p.nodeName);   //"p"
+
+console.log(node2.nodeValue);  //"node2"
+console.log(p.nodeValue);  //null
+
+console.log(document.nodeType);   //9
+console.log(node2.nodeType);   //3
+console.log(p.nodeType);   //1
+
+console.log(id.childNodes.length); //5
+id.removeChild(id.childNodes[0]);
+console.log(id.childNodes.length);  //4
+console.log(id.parentNode.nodeName); //"BODY"
+
+
